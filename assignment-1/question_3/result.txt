@@ -1,0 +1,4 @@
+ 
+564747d86000-564747da7000 rw-p 00000000 00:00 0                          [heap]
+7fff30aea000-7fff30b0b000 rw-p 00000000 00:00 0                          [stack]
+stack check after function return

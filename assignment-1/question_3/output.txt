@@ -1,0 +1,25 @@
+5604ecc1a000-5604ecc1c000 r-xp 00000000 08:01 3801155                    /home/abikamet/Documents/CSCI_5573_Advanced_Operating_Systems/assignment-1/question_3/vm_layout_display
+5604ece1b000-5604ece1c000 r--p 00001000 08:01 3801155                    /home/abikamet/Documents/CSCI_5573_Advanced_Operating_Systems/assignment-1/question_3/vm_layout_display
+5604ece1c000-5604ece1d000 rw-p 00002000 08:01 3801155                    /home/abikamet/Documents/CSCI_5573_Advanced_Operating_Systems/assignment-1/question_3/vm_layout_display
+5604ee720000-5604ee741000 rw-p 00000000 00:00 0                          [heap]
+5604ee720000-5604ee741000 rw-p 00000000 00:00 0                          [heap]
+5604ee720000-5604ee741000 rw-p 00000000 00:00 0                          [heap]
+5604ee720000-5604ee741000 rw-p 00000000 00:00 0                          [heap]
+5604ee720000-5604ee786000 rw-p 00000000 00:00 0                          [heap]
+
+PID:1468
+argc:0x7ffffca0905c
+argv:0x7ffffca09198
+[./vm_layout_display]:0x7ffffca09198
+program break:0xee741000
+
+Address of dynamically allocated memory: 0x5604ee721270
+Address of second malloc variable:0x5604ee721340
+
+malloc difference:0xa
+
+Address of third malloc variable:0x5604ee721410
+
+malloc difference :0xa
+
+program break:0xee786000
