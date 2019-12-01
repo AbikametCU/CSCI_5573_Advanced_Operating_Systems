@@ -1,0 +1,2 @@
+/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/question-1/custom_proc_info.ko
+/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/question-1/custom_proc_info.o

