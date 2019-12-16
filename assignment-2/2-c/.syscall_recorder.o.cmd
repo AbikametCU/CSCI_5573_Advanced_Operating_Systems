@@ -1,8 +1,8 @@
-cmd_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.o := gcc -Wp,-MD,/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/.syscall_recorder.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/5/include  -I./arch/x86/include -Iarch/x86/include/generated/uapi -Iarch/x86/include/generated  -Iinclude -I./arch/x86/include/uapi -Iarch/x86/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -D__KERNEL__ -fno-pie -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-pie -no-pie -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -fno-delete-null-pointer-checks -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(syscall_recorder)"  -D"KBUILD_MODNAME=KBUILD_STR(syscall_recorder)" -c -o /home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/.tmp_syscall_recorder.o /home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.c
+cmd_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.o := gcc -Wp,-MD,/home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/.syscall_recorder.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/5/include  -I./arch/x86/include -Iarch/x86/include/generated/uapi -Iarch/x86/include/generated  -Iinclude -I./arch/x86/include/uapi -Iarch/x86/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -D__KERNEL__ -fno-pie -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-pie -no-pie -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -DRETPOLINE -fno-delete-null-pointer-checks -Wno-maybe-uninitialized -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time  -DMODULE  -D"KBUILD_STR(s)=$(pound)s" -D"KBUILD_BASENAME=KBUILD_STR(syscall_recorder)"  -D"KBUILD_MODNAME=KBUILD_STR(syscall_recorder)" -c -o /home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/.tmp_syscall_recorder.o /home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.c
 
-source_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.o := /home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.c
+source_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.o := /home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.c
 
-deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.o := \
+deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.o := \
   include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/preempt/voluntary.h) \
@@ -58,75 +58,36 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/arch/dma/addr/t/64bit.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
   include/linux/bitops.h \
+  include/linux/bits.h \
   arch/x86/include/asm/bitops.h \
     $(wildcard include/config/x86/cmov.h) \
   arch/x86/include/asm/alternative.h \
     $(wildcard include/config/smp.h) \
-    $(wildcard include/config/paravirt.h) \
   arch/x86/include/asm/asm.h \
-  arch/x86/include/asm/ptrace.h \
-    $(wildcard include/config/x86/debugctlmsr.h) \
-  arch/x86/include/asm/segment.h \
-    $(wildcard include/config/cc/stackprotector.h) \
-    $(wildcard include/config/x86/32/lazy/gs.h) \
-  include/uapi/linux/const.h \
-  arch/x86/include/asm/cache.h \
-    $(wildcard include/config/x86/l1/cache/shift.h) \
-    $(wildcard include/config/x86/internode/cache/shift.h) \
-    $(wildcard include/config/x86/vsmp.h) \
-  arch/x86/include/asm/page_types.h \
-    $(wildcard include/config/physical/start.h) \
-    $(wildcard include/config/physical/align.h) \
-  arch/x86/include/asm/page_64_types.h \
-    $(wildcard include/config/randomize/base.h) \
-    $(wildcard include/config/randomize/base/max/offset.h) \
-  arch/x86/include/uapi/asm/ptrace.h \
-  arch/x86/include/uapi/asm/ptrace-abi.h \
-  arch/x86/include/asm/processor-flags.h \
-    $(wildcard include/config/vm86.h) \
-  arch/x86/include/uapi/asm/processor-flags.h \
-  arch/x86/include/asm/paravirt_types.h \
-    $(wildcard include/config/x86/local/apic.h) \
-    $(wildcard include/config/pgtable/levels.h) \
-    $(wildcard include/config/x86/pae.h) \
-    $(wildcard include/config/queued/spinlocks.h) \
-    $(wildcard include/config/paravirt/debug.h) \
-  arch/x86/include/asm/desc_defs.h \
-  arch/x86/include/asm/kmap_types.h \
-    $(wildcard include/config/debug/highmem.h) \
-  include/asm-generic/kmap_types.h \
-  arch/x86/include/asm/pgtable_types.h \
-    $(wildcard include/config/kmemcheck.h) \
-    $(wildcard include/config/mem/soft/dirty.h) \
-    $(wildcard include/config/proc/fs.h) \
-  arch/x86/include/asm/pgtable_64_types.h \
-  arch/x86/include/asm/sparsemem.h \
-    $(wildcard include/config/sparsemem.h) \
-  arch/x86/include/asm/spinlock_types.h \
-    $(wildcard include/config/paravirt/spinlocks.h) \
-    $(wildcard include/config/nr/cpus.h) \
-  include/asm-generic/qspinlock_types.h \
-  include/asm-generic/qrwlock_types.h \
-  include/asm-generic/ptrace.h \
   arch/x86/include/asm/rmwcc.h \
   arch/x86/include/asm/barrier.h \
     $(wildcard include/config/x86/ppro/fence.h) \
   arch/x86/include/asm/nops.h \
     $(wildcard include/config/mk7.h) \
     $(wildcard include/config/x86/p6/nop.h) \
+  include/asm-generic/barrier.h \
   include/asm-generic/bitops/find.h \
     $(wildcard include/config/generic/find/first/bit.h) \
   include/asm-generic/bitops/sched.h \
   arch/x86/include/asm/arch_hweight.h \
   arch/x86/include/asm/cpufeatures.h \
+    $(wildcard include/config/page/table/isolation.h) \
   arch/x86/include/asm/required-features.h \
     $(wildcard include/config/x86/minimum/cpu/family.h) \
     $(wildcard include/config/math/emulation.h) \
+    $(wildcard include/config/x86/pae.h) \
     $(wildcard include/config/x86/cmpxchg64.h) \
     $(wildcard include/config/x86/use/3dnow.h) \
     $(wildcard include/config/matom.h) \
+    $(wildcard include/config/paravirt.h) \
   arch/x86/include/asm/disabled-features.h \
     $(wildcard include/config/x86/intel/mpx.h) \
+    $(wildcard include/config/x86/intel/memory/protection/keys.h) \
   include/asm-generic/bitops/const_hweight.h \
   include/asm-generic/bitops/le.h \
   arch/x86/include/uapi/asm/byteorder.h \
@@ -154,6 +115,10 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/arch/has/cache/line/size.h) \
   include/uapi/linux/kernel.h \
   include/uapi/linux/sysinfo.h \
+  arch/x86/include/asm/cache.h \
+    $(wildcard include/config/x86/l1/cache/shift.h) \
+    $(wildcard include/config/x86/internode/cache/shift.h) \
+    $(wildcard include/config/x86/vsmp.h) \
   include/linux/dynamic_debug.h \
   include/linux/module.h \
     $(wildcard include/config/sysfs.h) \
@@ -171,6 +136,7 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/debug/list.h) \
   include/linux/poison.h \
     $(wildcard include/config/illegal/pointer/value.h) \
+  include/uapi/linux/const.h \
   include/linux/stat.h \
   arch/x86/include/uapi/asm/stat.h \
   include/uapi/linux/stat.h \
@@ -193,12 +159,12 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
   include/asm-generic/percpu.h \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/threads.h \
+    $(wildcard include/config/nr/cpus.h) \
     $(wildcard include/config/base/small.h) \
   include/linux/percpu-defs.h \
     $(wildcard include/config/debug/force/weak/per/cpu.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
-    $(wildcard include/config/debug/stack/usage.h) \
   include/linux/bug.h \
   arch/x86/include/asm/bug.h \
     $(wildcard include/config/debug/bugverbose.h) \
@@ -206,8 +172,16 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
   arch/x86/include/asm/thread_info.h \
+    $(wildcard include/config/vm86.h) \
     $(wildcard include/config/ia32/emulation.h) \
   arch/x86/include/asm/page.h \
+  arch/x86/include/asm/page_types.h \
+    $(wildcard include/config/physical/start.h) \
+    $(wildcard include/config/physical/align.h) \
+  arch/x86/include/asm/page_64_types.h \
+    $(wildcard include/config/kasan/extra.h) \
+    $(wildcard include/config/randomize/base.h) \
+    $(wildcard include/config/randomize/base/max/offset.h) \
   arch/x86/include/asm/page_64.h \
     $(wildcard include/config/debug/virtual.h) \
     $(wildcard include/config/flatmem.h) \
@@ -216,17 +190,53 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
   include/asm-generic/memory_model.h \
     $(wildcard include/config/discontigmem.h) \
     $(wildcard include/config/sparsemem/vmemmap.h) \
+    $(wildcard include/config/sparsemem.h) \
+  include/linux/pfn.h \
   include/asm-generic/getorder.h \
   arch/x86/include/asm/cpufeature.h \
     $(wildcard include/config/x86/feature/names.h) \
-    $(wildcard include/config/x86/debug/static/cpu/has.h) \
+    $(wildcard include/config/x86/fast/feature/tests.h) \
   arch/x86/include/asm/processor.h \
-    $(wildcard include/config/m486.h) \
+    $(wildcard include/config/cc/stackprotector.h) \
+    $(wildcard include/config/x86/debugctlmsr.h) \
     $(wildcard include/config/xen.h) \
+  arch/x86/include/asm/processor-flags.h \
+  arch/x86/include/uapi/asm/processor-flags.h \
   arch/x86/include/asm/math_emu.h \
-  arch/x86/include/uapi/asm/sigcontext.h \
-  arch/x86/include/asm/current.h \
-  arch/x86/include/asm/msr.h \
+  arch/x86/include/asm/ptrace.h \
+  arch/x86/include/asm/segment.h \
+    $(wildcard include/config/x86/32/lazy/gs.h) \
+  arch/x86/include/uapi/asm/ptrace.h \
+  arch/x86/include/uapi/asm/ptrace-abi.h \
+  arch/x86/include/asm/paravirt_types.h \
+    $(wildcard include/config/x86/local/apic.h) \
+    $(wildcard include/config/pgtable/levels.h) \
+    $(wildcard include/config/queued/spinlocks.h) \
+    $(wildcard include/config/paravirt/debug.h) \
+  arch/x86/include/asm/desc_defs.h \
+  arch/x86/include/asm/kmap_types.h \
+    $(wildcard include/config/debug/highmem.h) \
+  include/asm-generic/kmap_types.h \
+  arch/x86/include/asm/pgtable_types.h \
+    $(wildcard include/config/kmemcheck.h) \
+    $(wildcard include/config/mem/soft/dirty.h) \
+    $(wildcard include/config/proc/fs.h) \
+  arch/x86/include/asm/pgtable_64_types.h \
+  arch/x86/include/asm/sparsemem.h \
+  arch/x86/include/asm/nospec-branch.h \
+    $(wildcard include/config/retpoline.h) \
+  include/linux/static_key.h \
+  include/linux/jump_label.h \
+    $(wildcard include/config/jump/label.h) \
+  arch/x86/include/asm/jump_label.h \
+  include/linux/atomic.h \
+    $(wildcard include/config/generic/atomic64.h) \
+  arch/x86/include/asm/atomic.h \
+  arch/x86/include/asm/cmpxchg.h \
+  arch/x86/include/asm/cmpxchg_64.h \
+  arch/x86/include/asm/atomic64_64.h \
+  include/asm-generic/atomic-long.h \
+  arch/x86/include/asm/alternative-asm.h \
   arch/x86/include/asm/msr-index.h \
     $(wildcard include/config/tdp/nominal.h) \
     $(wildcard include/config/tdp/level/1.h) \
@@ -234,6 +244,14 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/tdp/control.h) \
     $(wildcard include/config/tdp/level1.h) \
     $(wildcard include/config/tdp/level2.h) \
+  arch/x86/include/asm/spinlock_types.h \
+    $(wildcard include/config/paravirt/spinlocks.h) \
+  include/asm-generic/qrwlock_types.h \
+  include/asm-generic/ptrace.h \
+  arch/x86/include/uapi/asm/sigcontext.h \
+  arch/x86/include/asm/current.h \
+  arch/x86/include/asm/msr.h \
+  arch/x86/include/asm/msr-index.h \
   arch/x86/include/uapi/asm/errno.h \
   include/uapi/asm-generic/errno.h \
   include/uapi/asm-generic/errno-base.h \
@@ -268,13 +286,6 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   arch/x86/include/asm/irqflags.h \
-  include/linux/atomic.h \
-    $(wildcard include/config/generic/atomic64.h) \
-  arch/x86/include/asm/atomic.h \
-  arch/x86/include/asm/cmpxchg.h \
-  arch/x86/include/asm/cmpxchg_64.h \
-  arch/x86/include/asm/atomic64_64.h \
-  include/asm-generic/atomic-long.h \
   include/linux/bottom_half.h \
   include/linux/spinlock_types.h \
   include/linux/lockdep.h \
@@ -282,11 +293,6 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/lock/stat.h) \
   include/linux/rwlock_types.h \
   arch/x86/include/asm/spinlock.h \
-  include/linux/jump_label.h \
-    $(wildcard include/config/jump/label.h) \
-  arch/x86/include/asm/jump_label.h \
-  arch/x86/include/asm/qspinlock.h \
-  include/asm-generic/qspinlock.h \
   arch/x86/include/asm/qrwlock.h \
   include/asm-generic/qrwlock.h \
   include/linux/rwlock.h \
@@ -487,6 +493,7 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/acpi/sleep.h) \
   arch/x86/include/asm/io.h \
     $(wildcard include/config/mtrr.h) \
+    $(wildcard include/config/x86/pat.h) \
   arch/x86/include/generated/asm/early_ioremap.h \
   include/asm-generic/early_ioremap.h \
     $(wildcard include/config/generic/early/ioremap.h) \
@@ -508,6 +515,7 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
   include/xen/features.h \
   include/xen/interface/features.h \
   arch/x86/include/asm/pvclock.h \
+    $(wildcard include/config/kvm/guest.h) \
   include/linux/clocksource.h \
     $(wildcard include/config/arch/clocksource/data.h) \
     $(wildcard include/config/clocksource/watchdog.h) \
@@ -515,10 +523,16 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
   arch/x86/include/asm/clocksource.h \
   arch/x86/include/uapi/asm/vsyscall.h \
   include/asm-generic/fixmap.h \
+  arch/x86/include/asm/hardirq.h \
+    $(wildcard include/config/kvm/intel.h) \
+    $(wildcard include/config/have/kvm.h) \
+    $(wildcard include/config/x86/thermal/vector.h) \
+    $(wildcard include/config/x86/mce/threshold.h) \
+    $(wildcard include/config/x86/mce/amd.h) \
+    $(wildcard include/config/hyperv.h) \
   arch/x86/include/asm/idle.h \
   arch/x86/include/asm/io_apic.h \
   arch/x86/include/asm/irq_vectors.h \
-    $(wildcard include/config/have/kvm.h) \
     $(wildcard include/config/pci/msi.h) \
   include/linux/topology.h \
     $(wildcard include/config/use/percpu/numa/node/id.h) \
@@ -530,7 +544,6 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
   include/linux/percpu.h \
     $(wildcard include/config/need/per/cpu/embed/first/chunk.h) \
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
-  include/linux/pfn.h \
   include/linux/elf.h \
   arch/x86/include/asm/elf.h \
     $(wildcard include/config/x86/x32/abi.h) \
@@ -548,6 +561,7 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/userfaultfd.h) \
     $(wildcard include/config/aio.h) \
     $(wildcard include/config/mmu/notifier.h) \
+    $(wildcard include/config/arch/want/batched/unmap/tlb/flush.h) \
   include/linux/auxvec.h \
   include/uapi/linux/auxvec.h \
   include/linux/uprobes.h \
@@ -570,6 +584,7 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/ppc64.h) \
   include/linux/rbtree_latch.h \
   arch/x86/include/asm/module.h \
+    $(wildcard include/config/m486.h) \
     $(wildcard include/config/m586.h) \
     $(wildcard include/config/m586tsc.h) \
     $(wildcard include/config/m586mmx.h) \
@@ -680,6 +695,7 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/debug/wx.h) \
     $(wildcard include/config/have/arch/soft/dirty.h) \
   arch/x86/include/asm/pgtable_64.h \
+  arch/x86/include/asm/pgtable-invert.h \
   include/asm-generic/pgtable.h \
     $(wildcard include/config/have/arch/huge/vmap.h) \
   include/linux/page-flags.h \
@@ -721,15 +737,14 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/cgroup/sched.h) \
     $(wildcard include/config/blk/dev/io/trace.h) \
     $(wildcard include/config/compat/brk.h) \
+    $(wildcard include/config/cgroups.h) \
     $(wildcard include/config/virt/cpu/accounting/gen.h) \
     $(wildcard include/config/sysvipc.h) \
     $(wildcard include/config/auditsyscall.h) \
     $(wildcard include/config/rt/mutexes.h) \
     $(wildcard include/config/task/xacct.h) \
     $(wildcard include/config/cpusets.h) \
-    $(wildcard include/config/cgroups.h) \
     $(wildcard include/config/futex.h) \
-    $(wildcard include/config/arch/want/batched/unmap/tlb/flush.h) \
     $(wildcard include/config/fault/injection.h) \
     $(wildcard include/config/latencytop.h) \
     $(wildcard include/config/function/graph/tracer.h) \
@@ -738,6 +753,7 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
     $(wildcard include/config/have/unstable/sched/clock.h) \
     $(wildcard include/config/irq/time/accounting.h) \
     $(wildcard include/config/have/copy/thread/tls.h) \
+    $(wildcard include/config/debug/stack/usage.h) \
   include/uapi/linux/sched.h \
   include/linux/sched/prio.h \
   include/linux/plist.h \
@@ -822,47 +838,116 @@ deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscal
   include/linux/vtime.h \
   include/linux/context_tracking_state.h \
     $(wildcard include/config/context/tracking.h) \
-  include/linux/static_key.h \
-  arch/x86/include/asm/hardirq.h \
-    $(wildcard include/config/x86/thermal/vector.h) \
-    $(wildcard include/config/x86/mce/threshold.h) \
-    $(wildcard include/config/x86/mce/amd.h) \
-    $(wildcard include/config/hyperv.h) \
-  include/linux/irq.h \
-    $(wildcard include/config/irq/domain/hierarchy.h) \
-    $(wildcard include/config/generic/pending/irq.h) \
-    $(wildcard include/config/hardirqs/sw/resend.h) \
-    $(wildcard include/config/generic/irq/legacy/alloc/hwirq.h) \
-    $(wildcard include/config/generic/irq/legacy.h) \
-  include/linux/irqhandler.h \
-  include/linux/irqreturn.h \
-  include/linux/irqnr.h \
-  include/uapi/linux/irqnr.h \
-  include/linux/io.h \
-  arch/x86/include/asm/irq.h \
-  arch/x86/include/asm/irq_regs.h \
-  include/linux/irqdesc.h \
-    $(wildcard include/config/irq/preflow/fasteoi.h) \
-    $(wildcard include/config/sparse/irq.h) \
-    $(wildcard include/config/handle/domain/irq.h) \
-  arch/x86/include/asm/hw_irq.h \
-    $(wildcard include/config/hpet/timer.h) \
-    $(wildcard include/config/dmar/table.h) \
-    $(wildcard include/config/ht/irq.h) \
-    $(wildcard include/config/x86/uv.h) \
-  include/linux/profile.h \
-    $(wildcard include/config/profiling.h) \
-  arch/x86/include/asm/sections.h \
-    $(wildcard include/config/debug/rodata.h) \
-  include/asm-generic/sections.h \
   arch/x86/include/asm/cacheflush.h \
+    $(wildcard include/config/debug/rodata.h) \
     $(wildcard include/config/debug/rodata/test.h) \
   include/asm-generic/cacheflush.h \
   include/linux/kallsyms.h \
   include/linux/buffer_head.h \
   include/linux/pagemap.h \
   include/linux/hugetlb_inline.h \
+  include/linux/syscalls.h \
+    $(wildcard include/config/ftrace/syscalls.h) \
+    $(wildcard include/config/old/sigsuspend.h) \
+    $(wildcard include/config/old/sigsuspend3.h) \
+    $(wildcard include/config/odd/rt/sigaction.h) \
+    $(wildcard include/config/clone/backwards.h) \
+    $(wildcard include/config/clone/backwards3.h) \
+  include/uapi/linux/aio_abi.h \
+  include/trace/syscall.h \
+    $(wildcard include/config/have/syscall/tracepoints.h) \
+  include/linux/tracepoint.h \
+    $(wildcard include/config/tracepoint.h) \
+  include/linux/trace_events.h \
+    $(wildcard include/config/bpf/events.h) \
+  include/linux/ring_buffer.h \
+    $(wildcard include/config/ring/buffer/allow/swap.h) \
+  include/linux/kmemcheck.h \
+  include/linux/seq_file.h \
+  include/linux/poll.h \
+  include/uapi/linux/poll.h \
+  arch/x86/include/uapi/asm/poll.h \
+  include/uapi/asm-generic/poll.h \
+  include/linux/trace_seq.h \
+  include/linux/seq_buf.h \
+  include/linux/perf_event.h \
+    $(wildcard include/config/have/hw/breakpoint.h) \
+    $(wildcard include/config/function/tracer.h) \
+    $(wildcard include/config/cpu/sup/intel.h) \
+  include/uapi/linux/perf_event.h \
+  arch/x86/include/asm/perf_event.h \
+    $(wildcard include/config/cpu/sup/amd.h) \
+  arch/x86/include/asm/stacktrace.h \
+    $(wildcard include/config/frame/pointer.h) \
+  include/linux/ptrace.h \
+  include/linux/pid_namespace.h \
+    $(wildcard include/config/pid/ns.h) \
+  include/linux/nsproxy.h \
+  include/linux/ns_common.h \
+  include/uapi/linux/ptrace.h \
+  arch/x86/include/asm/local64.h \
+  include/asm-generic/local64.h \
+  arch/x86/include/asm/local.h \
+  arch/x86/include/asm/hw_breakpoint.h \
+  arch/x86/include/uapi/asm/hw_breakpoint.h \
+  include/linux/kdebug.h \
+  arch/x86/include/asm/kdebug.h \
+  include/linux/ftrace.h \
+    $(wildcard include/config/dynamic/ftrace/with/regs.h) \
+    $(wildcard include/config/dynamic/ftrace.h) \
+    $(wildcard include/config/stack/tracer.h) \
+  include/linux/trace_clock.h \
+  arch/x86/include/asm/trace_clock.h \
+  arch/x86/include/asm/ftrace.h \
+  arch/x86/include/asm/compat.h \
+  arch/x86/include/asm/user32.h \
+  include/linux/cpu.h \
+    $(wildcard include/config/pm/sleep/smp.h) \
+    $(wildcard include/config/hotplug/smt.h) \
+  include/linux/node.h \
+    $(wildcard include/config/memory/hotplug/sparse.h) \
+  include/linux/device.h \
+    $(wildcard include/config/debug/devres.h) \
+    $(wildcard include/config/generic/msi/irq/domain.h) \
+    $(wildcard include/config/pinctrl.h) \
+    $(wildcard include/config/generic/msi/irq.h) \
+    $(wildcard include/config/dma/cma.h) \
+    $(wildcard include/config/of.h) \
+    $(wildcard include/config/devtmpfs.h) \
+    $(wildcard include/config/sysfs/deprecated.h) \
+  include/linux/klist.h \
+  include/linux/pinctrl/devinfo.h \
+  include/linux/pinctrl/consumer.h \
+  include/linux/pinctrl/pinctrl-state.h \
+  include/linux/ratelimit.h \
+  arch/x86/include/asm/device.h \
+    $(wildcard include/config/x86/dev/dma/ops.h) \
+    $(wildcard include/config/intel/iommu.h) \
+    $(wildcard include/config/amd/iommu.h) \
+  include/linux/pm_wakeup.h \
+  include/linux/irq_work.h \
+    $(wildcard include/config/irq/work.h) \
+  arch/x86/include/asm/irq_work.h \
+  include/linux/jump_label_ratelimit.h \
+  include/linux/perf_regs.h \
+    $(wildcard include/config/have/perf/regs.h) \
+  arch/x86/include/uapi/asm/perf_regs.h \
+  include/linux/cgroup.h \
+  include/uapi/linux/cgroupstats.h \
+  include/uapi/linux/taskstats.h \
+  include/linux/user_namespace.h \
+    $(wildcard include/config/persistent/keyrings.h) \
+  include/linux/dirent.h \
+  include/linux/slab.h \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/slab.h) \
+    $(wildcard include/config/slub.h) \
+    $(wildcard include/config/slob.h) \
+  include/linux/kmemleak.h \
+    $(wildcard include/config/debug/kmemleak.h) \
+  include/linux/kasan.h \
 
-/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.o: $(deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.o)
+/home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.o: $(deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.o)
 
-$(deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/2-c/syscall_recorder.o):
+$(deps_/home/abikamet/CSCI_5573_Advanced_Operating_Systems/2-c/syscall_recorder.o):

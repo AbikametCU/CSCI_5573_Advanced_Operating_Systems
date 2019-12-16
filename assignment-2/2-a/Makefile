@@ -1,3 +1,6 @@
+
+CONFIG_MODULE_SIG=n
+
 obj-m += ls_rootkit.o
 
 all:

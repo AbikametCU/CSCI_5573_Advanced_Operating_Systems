@@ -1,2 +1,0 @@
-/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/syscall_intercept/syscall_intercept.ko
-/home/abikamet/CSCI_5573_Advanced_Operating_Systems/assignment-2/syscall_intercept/syscall_intercept.o

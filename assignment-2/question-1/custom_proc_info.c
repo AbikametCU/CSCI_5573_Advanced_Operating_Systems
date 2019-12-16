@@ -20,6 +20,7 @@ MODULE_AUTHOR("Abikamet Nathan");
 MODULE_LICENSE("GPL");
 
 void **sys_call_table;
+void *sys_call_empty_entry;
 
 struct procinfo 
 {
@@ -107,6 +108,7 @@ static int __init begin_module(void)
 	printk(KERN_INFO "function pointer address of getprocinfo(syscall number 304):%p",getprocinfo);	
         sys_call_table = (void**)0xffffffff81a001c0;
         DISABLE;
+	sys_call_empty_entry = sys_call_table[SYS_ENTRY]; 
         sys_call_table[SYS_ENTRY] = (void*)getprocinfo;
         ENABLE;
         return 0;
@@ -116,7 +118,7 @@ static void __exit exit_module(void)
 {
         printk(KERN_INFO "************************************MODULE UNLOAD*************************************");
         DISABLE;
-        sys_call_table[SYS_ENTRY] = NULL;
+        sys_call_table[SYS_ENTRY] = sys_call_empty_entry;
         ENABLE;
 }
 

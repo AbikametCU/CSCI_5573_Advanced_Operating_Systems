@@ -14,18 +14,24 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 	.arch = MODULE_ARCH_INIT,
 };
 
+#ifdef RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0xc6c01fa, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0x5b7c78a8, __VMLINUX_SYMBOL_STR(pv_cpu_ops) },
-	{ 0xab132e4b, __VMLINUX_SYMBOL_STR(vfs_write) },
+	{ 0xe732d7bd, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xadfddaae, __VMLINUX_SYMBOL_STR(pv_cpu_ops) },
+	{ 0x449ad0a7, __VMLINUX_SYMBOL_STR(memcmp) },
+	{ 0x58cc752a, __VMLINUX_SYMBOL_STR(vfs_write) },
+	{ 0x91715312, __VMLINUX_SYMBOL_STR(sprintf) },
+	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
+	{ 0xd0eeecd3, __VMLINUX_SYMBOL_STR(vfs_read) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
-	{ 0xe2d5255a, __VMLINUX_SYMBOL_STR(strcmp) },
-	{ 0x763f6ebe, __VMLINUX_SYMBOL_STR(vfs_read) },
-	{ 0xbd9210be, __VMLINUX_SYMBOL_STR(filp_close) },
-	{ 0x823de7ac, __VMLINUX_SYMBOL_STR(filp_open) },
-	{ 0x3356b90b, __VMLINUX_SYMBOL_STR(cpu_tss) },
+	{ 0x111a33fb, __VMLINUX_SYMBOL_STR(filp_close) },
+	{ 0xea754025, __VMLINUX_SYMBOL_STR(filp_open) },
+	{ 0xbdc6b187, __VMLINUX_SYMBOL_STR(cpu_tss) },
 	{ 0xbdfb6dbb, __VMLINUX_SYMBOL_STR(__fentry__) },
 };
 
@@ -35,4 +41,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "FFF88787E1129D584850A94");
+MODULE_INFO(srcversion, "6E044A69B502EC5CE795700");

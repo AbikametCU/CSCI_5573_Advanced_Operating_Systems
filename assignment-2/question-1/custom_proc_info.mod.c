@@ -14,16 +14,20 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 	.arch = MODULE_ARCH_INIT,
 };
 
+#ifdef RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0xc6c01fa, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0x5b7c78a8, __VMLINUX_SYMBOL_STR(pv_cpu_ops) },
+	{ 0xe732d7bd, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xadfddaae, __VMLINUX_SYMBOL_STR(pv_cpu_ops) },
 	{ 0x4f8b5ddb, __VMLINUX_SYMBOL_STR(_copy_to_user) },
 	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
-	{ 0x1c25c0d3, __VMLINUX_SYMBOL_STR(init_task) },
+	{ 0x2aa07bc8, __VMLINUX_SYMBOL_STR(init_task) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
-	{ 0x391afe42, __VMLINUX_SYMBOL_STR(current_task) },
+	{ 0x3d529d22, __VMLINUX_SYMBOL_STR(current_task) },
 	{ 0xbdfb6dbb, __VMLINUX_SYMBOL_STR(__fentry__) },
 };
 
@@ -33,4 +37,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "9C21A3F9250A537CABAAC27");
+MODULE_INFO(srcversion, "B17E07F034F243529C8F06A");
